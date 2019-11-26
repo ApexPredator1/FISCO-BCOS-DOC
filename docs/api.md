@@ -804,7 +804,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"getSystemConfigByKey","params":[
 }
 ```
 ## call
-执行一个可以立即获得结果的请求，无需区块链共识        
+执行一个可以立即获得结果的请求，无需区块链共识，因为这里调用的是合约里的常量方法，常量方法指的是合约里不修改状态的代码，该请求不会全网广播，仅在指定节点上运行，所以不参与共识过程
 ### 参数          
 - `groupID`: `unsigned int` - 群组ID           
 - `object`: - 请求信息，其字段如下：
